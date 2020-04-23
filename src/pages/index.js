@@ -1,20 +1,37 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import CompanyImg from "../images/company.png"
+import Rep1Img from "../images/repertory/bernstein.jpg"
+import Rep2Img from "../images/repertory/drop.jpg"
+import Rep3Img from "../images/repertory/episodes.jpg"
+import Rep4Img from "../images/repertory/exit.jpg"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div className="page-content">
+      <div className="page-content-item gradient-white">
+        <p>Founded in 2003 by Artistic Director Larry Keigwin and Associate Director Nicole Wolcott, KEIGWIN + COMPANY creates and presents Keigwin’s electrifying brand of contemporary dance.</p>
+        <p>K+C reaches national and international audiences and invigorates diverse communities with a refreshing vision of dance that embodies a theatrical sensibility of wit, style, and heart.</p>
+        <div className="clip"></div>
+        <p>Community projects and education seek to physically engage audiences and aspiring dancers in movement and the choreographic process, and bring opportunities for individuals to become more invested in dance.</p>
+        <div className="item-title-bottom"></div>
+        <h2 className="item-title-bottom-text">About<br/>Us</h2>
+      </div>
+      <div className="page-content-item gradient-accent" style={{padding:'0'}}>
+        <div className="item-title-top"></div>
+        <div className="image-grid">
+          <div></div>
+          <div className="image-grid-item" style={{backgroundImage:'url(' + Rep1Img + ')'}}></div>
+          <div className="image-grid-item" style={{backgroundImage:'url(' + Rep2Img + ')'}}></div>
+          <div className="image-grid-item" style={{backgroundImage:'url(' + Rep3Img + ')'}}></div>
+          <div className="image-grid-item" style={{backgroundImage:'url(' + Rep4Img + ')'}}></div>
+        </div>
+        <h2 className="item-title-top-text">Repertory</h2>
+      </div>
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <img src={CompanyImg} alt="Company" className="company"></img>
   </Layout>
 )
 

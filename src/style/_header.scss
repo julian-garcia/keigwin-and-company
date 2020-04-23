@@ -1,0 +1,42 @@
+.header {
+  max-width: $desktop;
+  margin: 15px auto;
+  width: 100%;
+  position: relative;
+}
+
+.site-title {
+  text-align: left;
+  color: white;
+  text-decoration: none;
+  font-size: 26px;
+  margin: 0;
+
+  .plus {
+    color: $accent;
+    font-weight: bold;
+  }
+
+  @media (min-width: $phone) {
+    text-align: center;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 50px;
+  }
+
+  @media (min-width: $desktop-minwidth) {
+    font-size: 72.8px;
+    position: absolute;
+    left: 134px;
+    bottom: -75%;
+  }
+}
+
+.site-logo {
+  position: absolute;
+  max-width: 200px;
+  z-index: 1;
+  left: -30px;
+  top: -30px;
+}

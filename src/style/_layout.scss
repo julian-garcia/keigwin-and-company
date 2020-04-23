@@ -1,0 +1,50 @@
+.site-container {
+  display: grid;
+  grid-template-rows: 80px 1fr 60px;
+  background: black;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+
+  @media (min-width: $desktop-minwidth) {
+    max-width: $desktop;
+    min-height: 700px;
+    background: white;
+  }
+}
+
+.container-content {
+  max-width: 100vw;
+  
+  @media (min-width: $tablet) {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 150px 1fr 120px;
+  }
+}
+
+.container-bottom-left {
+  display: none;
+  @media (min-width: $desktop-minwidth) {
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    z-index: 0;
+    width: 200px;
+  }
+}
+
+.container-top-right {
+  display: none;
+  @media (min-width: $desktop-minwidth) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+  }
+}

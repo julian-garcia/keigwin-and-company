@@ -1,0 +1,80 @@
+.nav-menu {
+  @media (min-width: $desktop-minwidth) {
+    position: absolute;
+    right: -6px;
+    top: 60px;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.nav-menu-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  z-index: 99;
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  background-color: white;
+  cursor: pointer;
+
+  .nav-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media (min-width: $desktop) {
+    right: 0;
+  }
+}
+
+.nav-icon {
+  color: $accent;
+  font-size: 26px;
+  z-index: 99;
+  position: absolute;
+}
+
+.nav-menu-links {
+  display: none;
+  background: rgba(white,.8);
+  color: black;
+  position: absolute;
+  right: 0;
+  z-index: 99;
+  padding: 1rem;
+}
+
+.nav-icon[class*="social"] {
+  display: none;
+  @media (min-width: $desktop-minwidth) {
+    display: block;
+  }
+}
+
+.social1 {
+  position: absolute;
+  top: 0;
+  left: 30%;
+}
+
+.social2 {
+  position: absolute;
+  top: 26%;
+  left: 37%;
+}
+
+.social3 {
+  position: absolute;
+  top: 45%;
+  left: 58%;
+}
+
+.social4 {
+  position: absolute;
+  top: 55%;
+  right: 3px;
+}
