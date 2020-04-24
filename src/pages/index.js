@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
 import CompanyImg from "../images/company.png"
 import Rep1Img from "../images/repertory/bernstein.jpg"
 import Rep2Img from "../images/repertory/drop.jpg"

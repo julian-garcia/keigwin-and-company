@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Keigwin + Company`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Keigwin and Company`,
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -32,4 +32,5 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
+  pathPrefix: "/keigwin-and-company",
 }

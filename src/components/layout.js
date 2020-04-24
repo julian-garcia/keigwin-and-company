@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql, Link } from "gatsby"
+import { gsap } from "gsap"
 
 import Header from "./header"
 import "../style/main.scss"
@@ -25,7 +26,38 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
+  if (typeof document !== `undefined`) {
+    setTimeout(() => {
+      gsap.from(".dancer", {
+        duration: 2,
+        scale: 0.5, 
+        opacity: 0, 
+        delay: 0.5, 
+        stagger: 0.2,
+        ease: "elastic", 
+        force3D: true
+      });
+      gsap.from(".site-title", {
+        duration: 2, x: -300, ease: "bounce"
+      });
+      gsap.from(".page-content-item.gradient-white", {
+        rotation: 10, duration: 2, ease: "elastic"
+      });
+      gsap.from(".page-content-item.gradient-accent", {
+        height: 10, duration: 2, ease: "back.out(1.7)"
+      });
+      gsap.from(".site-logo", {
+        rotate: -40, duration: 1.5, ease: "sine"
+      });
+      gsap.from(".nav-menu", {
+        y: -40, duration: 2, 
+        ease: "sine"
+      });
+      gsap.from(".nav-menu", {
+        rotate: -40, duration: 2, ease: "sine"
+      });
+    }, 0)
+  }
   return (
     <div className="site-container">
       <img src={DancerImg} className="dancer-illustration left" />

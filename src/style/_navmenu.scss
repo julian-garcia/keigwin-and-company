@@ -1,4 +1,6 @@
 .nav-menu {
+  z-index: 99;
+  
   @media (min-width: $desktop-minwidth) {
     position: absolute;
     right: -6px;
